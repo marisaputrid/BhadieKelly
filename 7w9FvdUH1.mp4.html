@@ -42,21 +42,31 @@ header{
   z-index:10;
 }
 
-/* Banner atas */
-.top-banner{
-  text-align:center;
-  padding:10px 0;
+/* ===== BANNER ATAS FIXED ===== */
+.fixed-top-banner{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
 }
 
-/* Container */
+/* ===== BANNER BAWAH FIXED ===== */
+.fixed-bottom-banner{
+  position:fixed;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+}
+
 .container{
   flex:1;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  padding:20px;
-  padding-bottom:90px;
+  padding:120px 20px 120px 20px; /* kasih jarak atas & bawah */
   max-width:430px;
   margin:0 auto;
 }
@@ -77,15 +87,6 @@ footer{
   border-top:1px solid var(--border-color);
 }
 
-/* Banner bawah fixed */
-.fixed-banner{
-  position:fixed;
-  bottom:10px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:9999;
-}
-
 @media(max-width:400px){
   video{
     width:95%;
@@ -100,8 +101,8 @@ footer{
   BIG MAMA 🫶❤️🥰
 </header>
 
-<!-- ===== BANNER ATAS ===== -->
-<div class="top-banner">
+<!-- ===== TOP FIXED BANNER ===== -->
+<div class="fixed-top-banner">
 <script>
   atOptions = {
     'key' : '6958b087ad60028e1c1a9cb0e5bf5774',
@@ -125,8 +126,8 @@ footer{
   © 2025 Blacked Streaming. All rights reserved.
 </footer>
 
-<!-- ===== BANNER BAWAH FIXED ===== -->
-<div class="fixed-banner">
+<!-- ===== BOTTOM FIXED BANNER ===== -->
+<div class="fixed-bottom-banner">
 <script>
   atOptions = {
     'key' : '6958b087ad60028e1c1a9cb0e5bf5774',
@@ -139,39 +140,15 @@ footer{
 <script src="https://heartlessanthemantiquity.com/6958b087ad60028e1c1a9cb0e5bf5774/invoke.js"></script>
 </div>
 
-<!-- Proteksi -->
-<script>
-document.addEventListener('fullscreenchange',()=>{
-  if(document.fullscreenElement){
-    document.exitFullscreen();
-  }
-});
-
-document.addEventListener('contextmenu',e=>{
-  e.preventDefault();
-});
-
-document.addEventListener('keydown',e=>{
-  if(e.key==="F12") e.preventDefault();
-  if(e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) e.preventDefault();
-  if(e.ctrlKey && ["U","S"].includes(e.key.toUpperCase())) e.preventDefault();
-});
-</script>
-
-<!-- Histats -->
-<script type="text/javascript">
-var _Hasync= _Hasync|| [];
+</body>
+</html>
+ <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,5004471,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function() {
-var hs = document.createElement('script');
-hs.type = 'text/javascript';
-hs.async = true;
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();
-</script>
-
-</body>
-</html>
+})();</script>
